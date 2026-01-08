@@ -17,6 +17,10 @@ app.get("/", (req, res) => {
 const authRoutes = require("./src/routes/auth.routes");
 app.use("/api/auth", authRoutes);
 
+// debajo de la import de auth.routes
+const climaRoutes = require("./src/routes/clima.routes");
+app.use("/api/clima", climaRoutes);
+
 // (Opcional) estáticos
 app.use(express.static(path.join(__dirname, "public")));
 
